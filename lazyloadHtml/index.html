@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div class="lazy">
+        <img src="/images/loading.jpg" data-original="/images/bmw_m1_hood.jpg" />
+        <img src="/images/loading.jpg" data-original="/images/bmw_m1_side.jpg" />
+        <img src="/images/loading.jpg" data-original="/images/bmw_m3_gt.jpg" />
+        <img src="/images/loading.jpg" data-original="/images/corvette_pitstop.jpg" />
+    </div>
+</body>
+</html>
+<script src="/js/jquery-1.8.0.min.js"></script>
+<script src="/js/jquery.lazyload.min.js"></script>
+<script>
+    $(function () {
+        $(".lazy img").lazyload({
+            effect: "fadeIn",
+            failure_limit: 10,
+            skip_invisible: false
+        }).trigger("appear");
+    });
+
+
+</script>
